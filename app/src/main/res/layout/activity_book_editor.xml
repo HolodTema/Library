@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookEditorActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/textAuthorIs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                style="@style/styleDescription"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="Автор:"/>
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/styleDescription"
+                app:layout_constraintStart_toEndOf="@+id/textAuthorIs"
+                android:id="@+id/editBookAuthor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                style="@style/styleDescription"
+                android:id="@+id/textTitleIs"
+                app:layout_constraintTop_toBottomOf="@+id/editBookAuthor"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="Название:"
+                android:layout_margin="10dp"/>
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/textTitleIs"
+                app:layout_constraintTop_toBottomOf="@+id/editBookAuthor"
+                android:id="@+id/editBookTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_margin="10dp"
+                style="@style/styleDescription"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                style="@style/styleDescription"
+                android:id="@+id/textDescriptionIs"
+                app:layout_constraintTop_toBottomOf="@+id/editBookTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="Краткое описание:"
+                android:layout_margin="10dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/textDescriptionIs"
+                android:id="@+id/editBookDescription"
+                android:layout_margin="10dp"
+                style="@style/styleDescription"
+                android:inputType="textMultiLine"/>
+
+            <Button
+                android:id="@+id/buttonChooseImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClickButtonChooseImage"
+                android:text="выбрать изображение"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editBookDescription" />
+            <ImageView
+                android:id="@+id/imageBook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:scaleType="centerInside"
+                app:layout_constraintTop_toBottomOf="@+id/buttonChooseImage"
+                tools:layout_editor_absoluteX="20dp" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="назад"
+                android:id="@+id/buttonCancel"
+                android:onClick="onClickButtonCancel"
+                app:layout_constraintTop_toBottomOf="@+id/imageBook"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="применить"
+                android:id="@+id/buttonApply"
+                android:onClick="onClickButtonApply"
+                app:layout_constraintTop_toBottomOf="@+id/imageBook"
+                android:layout_margin="10dp"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="удалить"
+                android:id="@+id/buttonDelete"
+                android:onClick="onClickButtonDelete"
+                app:layout_constraintTop_toBottomOf="@+id/buttonApply"
+                android:layout_margin="10dp"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</FrameLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/textBookTitle"
+        style="@style/styleHeader"
+        android:text="Header of book"
+        android:gravity="center"/>
+
+    <ImageView
+        android:id="@+id/imageBook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerInside"
+        app:layout_constraintTop_toBottomOf="@+id/textBookTitle"
+        android:layout_margin="20dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/imageBook"
+        style="@style/styleDescription"
+        android:id="@+id/textBookAuthor"
+        android:gravity="right"
+        android:text="the author of book"
+        android:layout_margin="10dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textBookDescription"
+        app:layout_constraintTop_toBottomOf="@+id/textBookAuthor"
+        style="@style/styleDescription"
+        android:gravity="left"
+        android:layout_margin="10dp"
+        android:text="There is a description of book..."/>
+</androidx.constraintlayout.widget.ConstraintLayout>
